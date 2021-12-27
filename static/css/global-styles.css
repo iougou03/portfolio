@@ -1,0 +1,99 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #14141E;
+  color: #fff;
+  padding: 0 1rem;
+  padding-bottom: 3px;
+  z-index: 999;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+.nav-icon-container img {
+  width: 25px;
+}
+
+.nav-item-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.nav-item-container > span {
+  font-weight: bold;
+  transition: ease 300ms;
+}
+.nav-item-container > span:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  filter: brightness(70%);
+}
+.nav-item-container > span:not(:last-child) {
+  margin-right: 20px;
+}
+.nav-item-container .nav-home {
+  width: 25px;
+}
+
+.nav-underbar {
+  position: absolute;
+  height: 2px;
+  background-color: #E13535;
+  bottom: -3px;
+  left: 0;
+  transition: ease 300ms;
+}
+
+.nav-percent {
+  position: relative;
+  background-color: #E13535;
+  padding: 7px 20px;
+  padding-left: 25px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+.nav-percent span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-80%, -50%);
+}
+
+#intro {
+  position: relative;
+  background-color: #14141E;
+  width: 100%;
+  height: 100vh;
+}
+
+.intro--hero, .intro--header-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.intro--hero {
+  filter: brightness(70%);
+}
+
+.intro--header-container {
+  text-align: center;
+}
+.intro--header-container h1 {
+  font-size: 6.25rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.intro--header-container h3 {
+  font-size: 3.125rem;
+  color: #147CE5;
+}
+
+/*# sourceMappingURL=global-styles.css.map */

@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio static website (Just for showing)",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./static/scss/:./static/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iougou03/portfolio.git"
+  },
+  "author": "iougou03",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iougou03/portfolio/issues"
+  },
+  "homepage": "https://github.com/iougou03/portfolio#readme"
+}

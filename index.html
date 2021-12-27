@@ -1,12 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iougou03</title>
-</head>
-<body>
-    
-</body>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width" />
+    <link rel="stylesheet" href="./static/css/reset.css" />
+    <link rel="stylesheet" href="./static/css/global-styles.css" />
+    <title>iougou03 - portfolio</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-icon-container">
+        <img src="./static/images/port_icon.svg" alt="" />
+      </div>
+
+      <div class="nav-item-container">
+				<span><img class="nav-home" src="static/images/home-icon.png" alt="home icon"></span>
+				<span>About</span>
+				<span>Motivation</span>
+				<span>Works</span>
+				<span>Goal</span>
+				<span>Fphrase</span>
+				<div class="nav-underbar"></div>
+        <div class="nav-percent">
+          <span>0</span>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; %
+        </div>
+      </div>
+    </nav>
+    <!-- section about -->
+    <section id="intro">
+      <img class="intro--hero" src="./static/images/ascii-icon.png" alt="" />
+      <div class="intro--header-container">
+        <h1>iougou03</h1>
+        <h3>portfolio</h3>
+      </div>
+    </section>
+
+    <!-- section motivation -->
+    <section id="about">
+      <div class="about--header-container">
+        <h3>
+          <app-highlight text="Hello World!" color="#E13535"></app-highlight>my
+          name is
+        </h3>
+        <h1>Haesol Kwon</h1>
+      </div>
+
+      <div class="about--info-container">
+        <img
+          src="./static/images/emoji-right-hand.png"
+          alt="show infos emoji"
+        />
+        <div class="about--info">
+          <h3>Personal Info</h3>
+          <p>
+            <span class="dot"></span> pre-developer, who love to create in the
+            hand
+          </p>
+          <p>
+            <span class="dot"></span> still in college(
+            <app-highlight
+              text="knu"
+              color="#E13535"
+              fontWeight="bold"
+            ></app-highlight>
+            ), living in&nbsp;
+            <app-highlight
+              text="Pohang"
+              color="#147CE5"
+              fontWeight="bold"
+            ></app-highlight>
+          </p>
+          <p>
+            <span class="dot"></span> and have a great passion in learning
+            something&nbsp;
+            <app-highlight
+              text="new"
+              color="#DCC23A"
+              fontWeight="bold"
+            ></app-highlight
+            >✨
+          </p>
+        </div>
+      </div>
+
+      <div class="about--question-container">
+        <div class="about--question">
+          <div class="icon">
+            <img src="./static/images/emoji-me.png" alt="emoji me" />
+          </div>
+
+          <div class="about--question-text-field">
+            <div class="about--answer">
+              <h3><span class="dot"></span>Who am I?</h3>
+              <div>
+                <p>
+                  I’m a student who eagerly want to be a famous developer in
+                  Korea someday and have an interest in various field
+                </p>
+              </div>
+            </div>
+            <div class="about--answer">
+              <h3><span class="dot"></span>Who am I?</h3>
+              <div>
+                <p>
+                  I’m good at keeping work on something although its challenging
+                </p>
+                <p>
+                  I’m good at writing a memo
+                  <app-highlight
+                    text="(with Notion)"
+                    color="#7D7D7D"
+                  ></app-highlight>
+                </p>
+                <p>
+                  I’m good at considering other people and listening to their
+                  voice
+                </p>
+                <p>I speak to everyone honestly, always</p>
+              </div>
+            </div>
+            <div class="about--answer">
+              <h3><span class="dot"></span>Who am I?</h3>
+              <div>
+                <p>wanna be a developer who makes people life comfortable</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <app-mac-image
+          class="about--notion-mac"
+          imgSrc="./static/images/notion-memo-example.png"
+          imgAlt="mac snapshot"
+          imgWidth="300px"
+        ></app-mac-image>
+      </div>
+    </section>
+
+    <!-- movitaion section -->
+    <section id="motivation">
+      <div class="motivation--container">
+        <div class="motivation--header-wrapper">
+          <h1>Motivation to apply</h1>
+          <app-mac-image
+            class="motivation--apple-mac"
+            imgSrc="./static/images/apple-academy-logo.png"
+            imgWidth="270px"
+          >
+          </app-mac-image>
+        </div>
+
+        <div class="motivation--text-wrapper">
+          <div class="motivation--icon">
+            <img
+              src="./static/images/emoji-smile-removebg.png"
+              alt="emoji smile face"
+            />
+          </div>
+          <div class="motivation--textArea">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
+            impedit voluptatem quis omnis expedita ipsum, hic voluptas ad illo,
+            suscipit, sit accusamus cumque! Quibusdam delectus incidunt
+            aspernatur? Maiores, exercitationem accusamus. Lorem ipsum dolor sit
+            amet consectetur, adipisicing elit. Ducimus impedit voluptatem quis
+            omnis expedita ipsum, hic voluptas ad illo, suscipit, sit accusamus
+            cumque! Quibusdam delectus incidunt aspernatur? Maiores,
+            exercitationem accusamus.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- works section -->
+    <section id="works">
+      <div class="works-container">
+        <div class="works-header-wrapper">
+          <h1>Skills &</h1>
+          <h1>Projects</h1>
+        </div>
+
+        <div class="works-skills-container">
+          <div class="works-text-wrapper">
+            <h2>skills</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+              vel dolorem fugit iusto atque modi earum doloremque eligendi sint
+              sequi! Quae, sit officia rerum quisquam illo numquam doloribus
+              tenetur! Dicta.
+            </p>
+          </div>
+
+          <div class="works-skills-list"></div>
+        </div>
+
+        <div class="works-projects-container">
+          <div class="works-text-wrapper">
+            <h2>skills</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+              vel dolorem fugit iusto atque modi earum doloremque eligendi sint
+              sequi! Quae, sit officia rerum quisquam illo numquam doloribus
+              tenetur! Dicta.
+            </p>
+          </div>
+
+          <div class="works-projects-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- goal section -->
+    <section id="goal"></section>
+
+    <!-- fphrase section -->
+    <section id="fphrase"></section>
+  </body>
+  <script src="js/index.js" type="module"></script>
 </html>
