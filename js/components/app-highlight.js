@@ -1,29 +1,33 @@
 export default class AppHighlight extends HTMLElement {
+  text;
+  color;
+  fontSize;
+  fontWeight;
+
   constructor() {
     super();
+    this.text = this.getAttribute("text");
+    this.color = this.getAttribute("color");
+    this.fontSize = this.getAttribute("fontSize");
+    this.fontWeight = this.getAttribute("fontWeight");
   }
 
   connectedCallback() {
+    if (!this.text) return;
     this.attachShadow({ mode: "open" });
     this.render();
   }
 
   render() {
-    const text = this.getAttribute("text");
-    const color = this.getAttribute("color");
-    const fontSize = this.getAttribute("fontSize");
-    const fontWeight = this.getAttribute("fontWeight");
-    if (!text) return;
-
     this.shadowRoot.innerHTML = `
       <style>
         span{
-          ${color ? "color : " + color : ""};
-          ${fontSize ? "font-size : " + fontSize : ""};
-          ${fontWeight ? "font-weight : " + fontWeight : ""};
+          ${this.color ? "color : " + this.color : ""};
+          ${this.fontSize ? "font-size : " + this.fontSize : ""};
+          ${this.fontWeight ? "font-weight : " + this.fontWeight : ""};
         }
       </style>
-      <span>${text}</span>
+      <span>${this.text}</span>
     `;
   }
 }

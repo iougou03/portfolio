@@ -1,17 +1,26 @@
 export default class AppMacImage extends HTMLElement {
+  imgSrc;
+  imgAlt;
+  imgWidth;
+  imgHeight;
+
   styles = `
   .window {
     width: fit-content;
-    background-color: #C4C4C4;
-    border: 1px #C4C4C4 solid;
-    border-radius: 11px;
+    background-color: #E8E7E8;
+    border: 1px #E8E7E8 solid;
+    border-radius: 6px;
+    border-bottom:none;
+    transition: ease 300ms;
   }
   .window img {
-    border-radius: 0 0 14px 14px;
+    border-radius: 0 0 7px 7px;
+    position:relative;
+    bottom:-2px;
   }
   
   .window-bar {
-    padding: 3px 8px;
+    padding: 3px 5px;
   }
   
   .bar-list {
@@ -19,50 +28,73 @@ export default class AppMacImage extends HTMLElement {
   }
   .bar-list span {
     display: inline-block;
-    width: 5px;
-    height: 5px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
   }
   .bar-list span:nth-child(1) {
-    background-color: #E13535;
+    background-color: #FF6059;
   }
   .bar-list span:nth-child(2) {
-    background-color: #DCC23A;
+    background-color: #FFBD2E;
     margin: 0 5px;
   }
   .bar-list span:nth-child(3) {
-    background-color: #09DE8D;
+    background-color: #28CA42;
   }
   
   p {
+    position:relative;
     color: #C4C4C4;
     text-align: right;
-    margin: 0;
-    padding: 5px 5px 0 0;
+    margin: 5px 5px 0 0;
+    width:fit-content;
+    float:right;
+  }
+  p > span{
+    display:inline-block;
+    height:2px;
+    width:0;
+    position:absolute;
+    bottom:-2px;
+    right:0;
+    background-color: #C4C4C4;
+    transition: ease 300ms;
+  }
+  .window:hover{
+    transform: translateY(-6px);
   }
   `;
   constructor() {
     super();
+    this.imgSrc = this.getAttribute("imgSrc");
+    this.imgAlt = this.getAttribute("imgAlt");
+    this.imgWidth = this.getAttribute("imgWidth");
+    this.imgHeight = this.getAttribute("imgHeight");
   }
-
+  
   connectedCallback() {
+    if (!this.imgSrc) return;
     this.attachShadow({ mode: "open" });
     this.render();
+    
+    if(this.imgAlt){
+      this.shadowRoot.querySelector(".window").addEventListener("mouseenter",()=>{
+        this.shadowRoot.querySelector(".comment > span").style.width = "100%";
+      })
+      this.shadowRoot.querySelector(".window").addEventListener("mouseleave",()=>{
+        this.shadowRoot.querySelector(".comment > span").style.width = "0";
+      })
+    }
   }
 
   render() {
-    const imgSrc = this.getAttribute("imgSrc");
-    const imgAlt = this.getAttribute("imgAlt");
-    const imgWidth = this.getAttribute("imgWidth");
-    const imgHeight = this.getAttribute("imgHeight");
-    if (!imgSrc) return;
-
     this.shadowRoot.innerHTML += `
     <style>
     ${this.styles}
       .window img{
-        ${imgWidth ? "width : " + imgWidth : ""}
-        ${imgHeight ? "height : " + imgHeight : ""}
+        ${this.imgWidth ? "width : " + this.imgWidth : ""}
+        ${this.imgHeight ? "height : " + this.imgHeight : ""}
       }
     </style>
     <div class="window">
@@ -73,9 +105,9 @@ export default class AppMacImage extends HTMLElement {
           <span></span>
         </div>
       </div>
-      <img src="${imgSrc}" alt="${imgAlt ? "alt = " + imgAlt : ""}">
+      <img src="${this.imgSrc}" alt="${this.imgAlt ? "alt = " + this.imgAlt : ""}">
     </div>
-    ${imgAlt ? `<p>${imgAlt}</p>` : ""}
+    ${this.imgAlt ? `<p class="comment">${this.imgAlt}<span></span></p>` : ""}
     `;
   }
 }

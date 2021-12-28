@@ -1,4 +1,10 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap");
+nav, section {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  font-family: "Rajdhani", sans-serif;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -10,10 +16,9 @@ nav {
   align-items: center;
   background-color: #14141E;
   color: #fff;
-  padding: 0 1rem;
+  padding: 0 26px;
   padding-bottom: 3px;
   z-index: 999;
-  font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
 
 .nav-icon-container img {
@@ -94,6 +99,269 @@ nav {
 .intro--header-container h3 {
   font-size: 3.125rem;
   color: #147CE5;
+}
+
+#about {
+  position: relative;
+  background-color: #F5F5F7;
+  padding: 20vh 0;
+}
+
+.about--header-container {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.about--header-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+}
+.about--header-container h1 {
+  font-size: 5rem;
+}
+
+.about--info-container {
+  background-color: #1f1f1f;
+  display: flex;
+  align-items: flex-end;
+  width: fit-content;
+  padding: 3rem 4.5rem 0 4.5rem;
+  border-radius: 30px;
+  margin: auto;
+}
+.about--info-container img {
+  width: 100px;
+  height: fit-content;
+  margin-right: 2rem;
+}
+
+.about--info {
+  color: #7d7d7d;
+  padding-bottom: 2rem;
+}
+.about--info h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+.about--info p {
+  font-size: 1.125rem;
+  margin-bottom: 1em;
+}
+.about--info .dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #7d7d7d;
+  margin: 0 1rem;
+}
+
+.about--question-container {
+  position: relative;
+  padding-top: 10vh;
+  max-width: 1050px;
+  margin: auto;
+}
+
+.about--question {
+  position: relative;
+  background-color: #fff;
+  width: fit-content;
+  margin-left: 60px;
+  padding: 4rem 2rem 3rem 5rem;
+  border-radius: 20px;
+}
+.about--question .icon {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 20%;
+  left: 0;
+  transform: translateX(-50%);
+  background-color: #2e2e2e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about--question .icon img {
+  width: 70px;
+}
+
+.about--question-text-field {
+  max-width: 540px;
+}
+.about--question-text-field .about--answer:last-child {
+  margin-bottom: 0;
+}
+.about--question-text-field .about--answer {
+  margin-bottom: 3rem;
+}
+.about--question-text-field .about--answer h3 {
+  color: #147ce5;
+  font-size: 1.375rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+}
+.about--question-text-field .about--answer .dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #147ce5;
+  margin-right: 0.5rem;
+}
+.about--question-text-field .about--answer .answer {
+  padding: 1rem 1rem 0rem 1rem;
+  background-color: #f5f5f7;
+  border-radius: 10px;
+}
+.about--question-text-field .about--answer p {
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  width: fit-content;
+  line-height: 1.4em;
+}
+
+.about--notion-mac {
+  position: absolute;
+  right: 0;
+  bottom: 10vh;
+}
+
+#motivation {
+  background-color: #f5f5f7;
+  padding-bottom: 5rem;
+}
+
+.motivation--container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10vh 0;
+}
+
+.motivation--header-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 7rem;
+}
+.motivation--header-wrapper h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-right: 2rem;
+}
+
+.motivation--text-wrapper {
+  margin: auto;
+  position: relative;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 5rem 3rem 5rem 6rem;
+}
+.motivation--text-wrapper .motivation--icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background-color: #2e2e2e;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.motivation--text-wrapper .motivation--icon img {
+  width: 100px;
+}
+
+.motivation--textArea {
+  font-size: 1.5rem;
+  line-height: 1.5em;
+}
+
+#works {
+  width: 100%;
+  background-color: #f5f5f7;
+  padding: 10vh 2rem;
+}
+
+.works--container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.works--header-container {
+  margin-bottom: 8rem;
+}
+.works--header-container h1 {
+  font-weight: bold;
+  font-size: 5rem;
+  line-height: 0.9em;
+}
+
+.works--skills-container, .works--projects-container {
+  margin-bottom: 10rem;
+}
+
+.works--text-field {
+  max-width: 740px;
+  margin-bottom: 5rem;
+}
+.works--text-field h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+.works--text-field p {
+  color: #7D7D7D;
+  font-size: 1.5rem;
+  line-height: 1.5em;
+}
+
+#goal {
+  position: relative;
+  background-color: #f5f5f7;
+  padding: 10vh 0;
+}
+
+.goal--container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.goal--header-container {
+  position: relative;
+  border-radius: 20px;
+}
+.goal--header-container > img {
+  filter: brightness(70%);
+  border-radius: 20px;
+}
+.goal--header-container div {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+.goal--header-container div h3 {
+  font-size: 1.5rem;
+}
+.goal--header-container div h3 > img {
+  width: 20px;
+  filter: invert(100%);
+}
+.goal--header-container div h1 {
+  font-size: 5rem;
 }
 
 /*# sourceMappingURL=global-styles.css.map */

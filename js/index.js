@@ -1,5 +1,7 @@
 import AppHighlight from "./components/app-highlight.js";
 import AppMacImage from "./components/app-mac-image.js";
+import { AppSkill, AppSkillContainer} from "./components/app-skill.js";
+import { AppProject, AppProjectContainer} from "./components/app-project.js";
 import {
   setUnderbarPosition,
   setPercent,
@@ -48,6 +50,10 @@ function handleScroll() {
 function setComponents() {
   customElements.define("app-highlight", AppHighlight);
   customElements.define("app-mac-image", AppMacImage);
+  customElements.define("app-skill", AppSkill);
+  customElements.define("app-skill-container", AppSkillContainer);
+  customElements.define("app-project", AppProject);
+  customElements.define("app-project-container", AppProjectContainer);
 }
 
 // definate web components

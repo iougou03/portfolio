@@ -1,6 +1,6 @@
 import { scrollRatio, sectionPoint } from "../index.js";
 
-const itemMarginRight = 21.5
+const itemMarginRight = 20
 const item = document.querySelector(".nav-item-container")
 const underbar = document.querySelector(".nav-underbar");
 
@@ -13,6 +13,7 @@ let underbarPoint = [
   0, // "goal"
   0, // "fphrase"
 ]
+
 function setUnderbarPoint() {
   let width = 0; // margin-right 1rem
 
@@ -30,7 +31,7 @@ function setUnderbarPosition(){
     if(window.scrollY < sectionPoint[i].sumHeight){
       idx = i;
       break;
-    } 
+    }
   }
   if (idx === navbarPosition) return;
 

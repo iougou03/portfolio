@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, user-scalable=no, width=device-width"
+    />
     <link rel="stylesheet" href="./static/css/reset.css" />
     <link rel="stylesheet" href="./static/css/global-styles.css" />
     <title>iougou03 - portfolio</title>
@@ -11,24 +14,29 @@
   <body>
     <nav>
       <div class="nav-icon-container">
-        <img src="./static/images/port_icon.svg" alt="" />
+        <img src="./static/images/site-icon.png" alt="" />
       </div>
 
       <div class="nav-item-container">
-				<span><img class="nav-home" src="static/images/home-icon.png" alt="home icon"></span>
-				<span>About</span>
-				<span>Motivation</span>
-				<span>Works</span>
-				<span>Goal</span>
-				<span>Fphrase</span>
-				<div class="nav-underbar"></div>
+        <span
+          ><img
+            class="nav-home"
+            src="static/images/home-icon.png"
+            alt="home icon"
+        /></span>
+        <span>About</span>
+        <span>Motivation</span>
+        <span>Works</span>
+        <span>Goal</span>
+        <span>Fphrase</span>
+        <div class="nav-underbar"></div>
         <div class="nav-percent">
           <span>0</span>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; %
         </div>
       </div>
     </nav>
-    <!-- section about -->
+    <!-- section intro -->
     <section id="intro">
       <img class="intro--hero" src="./static/images/ascii-icon.png" alt="" />
       <div class="intro--header-container">
@@ -37,7 +45,7 @@
       </div>
     </section>
 
-    <!-- section motivation -->
+    <!-- section about -->
     <section id="about">
       <div class="about--header-container">
         <h3>
@@ -94,7 +102,7 @@
           <div class="about--question-text-field">
             <div class="about--answer">
               <h3><span class="dot"></span>Who am I?</h3>
-              <div>
+              <div class="answer">
                 <p>
                   I’m a student who eagerly want to be a famous developer in
                   Korea someday and have an interest in various field
@@ -103,7 +111,7 @@
             </div>
             <div class="about--answer">
               <h3><span class="dot"></span>Who am I?</h3>
-              <div>
+              <div class="answer">
                 <p>
                   I’m good at keeping work on something although its challenging
                 </p>
@@ -123,7 +131,7 @@
             </div>
             <div class="about--answer">
               <h3><span class="dot"></span>Who am I?</h3>
-              <div>
+              <div class="answer">
                 <p>wanna be a developer who makes people life comfortable</p>
               </div>
             </div>
@@ -175,14 +183,14 @@
 
     <!-- works section -->
     <section id="works">
-      <div class="works-container">
-        <div class="works-header-wrapper">
+      <div class="works--container">
+        <div class="works--header-container">
           <h1>Skills &</h1>
           <h1>Projects</h1>
         </div>
 
-        <div class="works-skills-container">
-          <div class="works-text-wrapper">
+        <div class="works--skills-container">
+          <div class="works--text-field">
             <h2>skills</h2>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
@@ -191,13 +199,13 @@
               tenetur! Dicta.
             </p>
           </div>
-
-          <div class="works-skills-list"></div>
+          <app-skill-container >
+          </app-skill-container>
         </div>
 
-        <div class="works-projects-container">
-          <div class="works-text-wrapper">
-            <h2>skills</h2>
+        <div class="works--projects-container">
+          <div class="works--text-field">
+            <h2>Projects</h2>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
               vel dolorem fugit iusto atque modi earum doloremque eligendi sint
@@ -205,17 +213,38 @@
               tenetur! Dicta.
             </p>
           </div>
-
-          <div class="works-projects-list"></div>
+          <app-project-container>
+          </app-project-container>
         </div>
       </div>
     </section>
 
     <!-- goal section -->
-    <section id="goal"></section>
+    <section id="goal">
+			<div class="goal--container">
+				<div class="goal--header-container">
+					<img src="./static/images/background-apple-bigsur.png" alt="bigsur background">
+					<div>
+						<h3>If I join <app-highlight
+								text="apple academy"
+								color="#f5f5f7"
+							></app-highlight><img src="static/images/apple-logo.png" alt="apple logo"></h3>
+						<h1>What's my goals</h1>
+					</div>
+				</div>
+
+				<div class="goal--text-field">
+
+				</div>
+			</div>
+
+		</section>
 
     <!-- fphrase section -->
-    <section id="fphrase"></section>
+    <section id="fphrase">
+
+
+		</section>
   </body>
   <script src="js/index.js" type="module"></script>
 </html>
