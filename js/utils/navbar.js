@@ -21,14 +21,14 @@ function setUnderbarPoint() {
     width += item.children[i].offsetWidth;
     underbarPoint[i + 1] = width;
   }
-
   underbar.style.width = `${item.children[0].offsetWidth}px`;
+  console.log(underbarPoint)
 }
 
 function setUnderbarPosition(){
   let idx = 0;
   for(let i = 0 ; i < sectionPoint.length ; i++){
-    if(window.scrollY < sectionPoint[i].sumHeight){
+    if(window.scrollY < sectionPoint[i].sumHeight - 10){
       idx = i;
       break;
     }

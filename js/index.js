@@ -39,6 +39,7 @@ function setScrollRatio() {
 
 function handleResize() {
   setTotalHeight();
+  setSectionPoint();
 }
 function handleScroll() {
   setScrollRatio();

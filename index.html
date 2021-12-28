@@ -9,7 +9,7 @@
     />
     <link rel="stylesheet" href="./static/css/reset.css" />
     <link rel="stylesheet" href="./static/css/global-styles.css" />
-		<link rel="icon" href="./favicon.ico?v=1.1"> 
+    <link rel="icon" href="./favicon.ico?v=1.1" />
     <title>iougou03 - portfolio</title>
   </head>
   <body>
@@ -142,7 +142,7 @@
         <app-mac-image
           class="about--notion-mac"
           imgSrc="./static/images/notion-memo-example.png"
-          imgAlt="mac snapshot"
+          imgAlt="notion snapshot"
           imgWidth="300px"
         ></app-mac-image>
       </div>
@@ -200,8 +200,7 @@
               tenetur! Dicta.
             </p>
           </div>
-          <app-skill-container >
-          </app-skill-container>
+          <app-skill-container> </app-skill-container>
         </div>
 
         <div class="works--projects-container">
@@ -214,38 +213,76 @@
               tenetur! Dicta.
             </p>
           </div>
-          <app-project-container>
-          </app-project-container>
+          <app-project-container> </app-project-container>
         </div>
       </div>
     </section>
 
     <!-- goal section -->
     <section id="goal">
-			<div class="goal--container">
-				<div class="goal--header-container">
-					<img src="./static/images/background-apple-bigsur.png" alt="bigsur background">
-					<div>
-						<h3>If I join <app-highlight
-								text="apple academy"
-								color="#f5f5f7"
-							></app-highlight><img src="static/images/apple-logo.png" alt="apple logo"></h3>
-						<h1>What's my goals</h1>
-					</div>
-				</div>
+      <div class="goal--container">
+        <div class="goal--header-container">
+          <img
+            src="./static/images/background-apple-bigsur.png"
+            alt="bigsur background"
+          />
+          <div>
+            <h3>
+              If I join
+              <app-highlight
+                text="apple academy"
+                color="#f5f5f7"
+              ></app-highlight
+              ><img src="static/images/apple-logo.png" alt="apple logo" />
+            </h3>
+            <h1>What's my goals</h1>
+          </div>
+        </div>
 
-				<div class="goal--text-field">
-
-				</div>
-			</div>
-
-		</section>
+        <div class="goal--text-field">My goal in apple academy...</div>
+      </div>
+    </section>
 
     <!-- fphrase section -->
     <section id="fphrase">
-
-
-		</section>
+      <div class="fphrase--container">
+        <div class="fphrase--text-container">
+          <p>Favorite phrase</p>
+          <p>나만 나를<br />포기하지<br />않으면 된다.</p>
+        </div>
+        <div class="fphrase--line"></div>
+        <div class="fphrase--image-container">
+          <app-mac-image
+            class="fphrase--careerly"
+            imgSrc="./static/images/careerly-phrase.png"
+            imgAlt="careerly snapshot"
+            imgWidth="400px"
+          ></app-mac-image>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <div class="footer--copyright">
+          © Copyright 2021, iougou03. All Rights Reserved
+          <a target="_blank" href="https://github.com/iougou03?tab=repositories"
+            ><img src="static/images/skills/github.png" alt="github icon"
+          /></a>
+        </div>
+        <div class="footer--contact">
+          <app-highlight text="Contact : " color="#C4C4C4" fontWeight="bold">
+          </app-highlight
+          >&nbsp;
+          <a href="mailto:haesol820@naver.com?subject=Hello Haesol"
+            >haesol820@naver.com</a
+          >&nbsp;&nbsp;|<a
+            target="_blank"
+            href="https://www.instagram.com/iougou03/?hl=ko"
+            ><img src="./static/images/instagram.png" alt="instagram icon"
+          /></a>
+        </div>
+      </div>
+    </footer>
   </body>
   <script src="js/index.js" type="module"></script>
 </html>

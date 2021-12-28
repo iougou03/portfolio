@@ -93,8 +93,8 @@ export default class AppMacImage extends HTMLElement {
     <style>
     ${this.styles}
       .window img{
-        ${this.imgWidth ? "width : " + this.imgWidth : ""}
-        ${this.imgHeight ? "height : " + this.imgHeight : ""}
+        ${this.imgWidth ? "width : " + this.imgWidth : ""};
+        ${this.imgHeight ? "height : " + this.imgHeight : ""};
       }
     </style>
     <div class="window">
