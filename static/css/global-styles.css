@@ -25,24 +25,28 @@ nav {
   width: 25px;
 }
 
-.nav-item-container {
+.nav-item-container, .nav-item-list {
   position: relative;
   display: flex;
   align-items: center;
 }
-.nav-item-container > span {
+
+.nav-item-list {
+  margin-right: 2rem;
+}
+.nav-item-list > li {
   font-weight: bold;
   transition: ease 300ms;
 }
-.nav-item-container > span:hover {
+.nav-item-list > li:hover {
   cursor: pointer;
   transform: scale(1.05);
   filter: brightness(70%);
 }
-.nav-item-container > span:not(:last-child) {
+.nav-item-list > li:not(:last-child) {
   margin-right: 20px;
 }
-.nav-item-container .nav-home {
+.nav-item-list .nav-home {
   width: 25px;
 }
 
@@ -58,7 +62,7 @@ nav {
 .nav-percent {
   position: relative;
   background-color: #E13535;
-  padding: 7px 20px;
+  padding: 7px 15px;
   padding-left: 25px;
   border-radius: 999px;
   font-size: 0.75rem;
@@ -68,24 +72,26 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-80%, -50%);
+  line-height: 10px;
 }
 
 #intro {
   position: relative;
   background-color: #14141E;
   width: 100%;
-  height: 100vh;
-}
-
-.intro--hero, .intro--header-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .intro--hero {
   filter: brightness(70%);
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.intro--header-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .intro--header-container {
@@ -99,6 +105,16 @@ nav {
 .intro--header-container h3 {
   font-size: 3.125rem;
   color: #147CE5;
+}
+
+.screen {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #about {
@@ -247,27 +263,27 @@ nav {
   padding: 10vh 0;
 }
 
-.motivation--header-wrapper {
+.motivation--header-container {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   margin: auto;
   margin-bottom: 7rem;
 }
-.motivation--header-wrapper h1 {
+.motivation--header-container h1 {
   font-size: 5rem;
   font-weight: bold;
   margin-right: 2rem;
 }
 
-.motivation--text-wrapper {
+.motivation--text-container {
   margin: auto;
   position: relative;
   background-color: #fff;
   border-radius: 20px;
   padding: 5rem 3rem 5rem 6rem;
 }
-.motivation--text-wrapper .motivation--icon {
+.motivation--text-container .motivation--icon {
   position: absolute;
   top: 50%;
   left: 0;
@@ -280,7 +296,7 @@ nav {
   align-items: center;
   justify-content: center;
 }
-.motivation--text-wrapper .motivation--icon img {
+.motivation--text-container .motivation--icon img {
   width: 100px;
 }
 
@@ -343,8 +359,10 @@ nav {
   position: relative;
   border-radius: 20px;
   margin-bottom: 5rem;
+  width: 100%;
 }
 .goal--header-container > img {
+  width: 100%;
   filter: brightness(70%);
   border-radius: 20px;
 }
@@ -465,6 +483,12 @@ footer > div:hover {
 
 .footer--contact {
   margin-top: 2rem;
+}
+
+.scroll-fade-in-out {
+  display: none;
+  opacity: 0;
+  transition: ease 300ms;
 }
 
 /*# sourceMappingURL=global-styles.css.map */

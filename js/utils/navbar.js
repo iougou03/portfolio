@@ -1,8 +1,10 @@
 import { scrollRatio, sectionPoint } from "../index.js";
 
-const itemMarginRight = 20
-const item = document.querySelector(".nav-item-container")
+const itemMarginRight = 20;
+const navbar = document.querySelector("nav");
+const itemList = document.querySelector(".nav-item-list");
 const underbar = document.querySelector(".nav-underbar");
+const mobilewidth = 740;
 
 let navbarPosition = 0;
 let underbarPoint = [
@@ -18,11 +20,10 @@ function setUnderbarPoint() {
   let width = 0; // margin-right 1rem
 
   for(let i = 0 ; i < underbarPoint.length - 1 ; i++){
-    width += item.children[i].offsetWidth;
+    width += itemList.children[i].offsetWidth;
     underbarPoint[i + 1] = width;
   }
-  underbar.style.width = `${item.children[0].offsetWidth}px`;
-  console.log(underbarPoint)
+  underbar.style.width = `${itemList.children[0].offsetWidth}px`;
 }
 
 function setUnderbarPosition(){
@@ -36,7 +37,7 @@ function setUnderbarPosition(){
   if (idx === navbarPosition) return;
 
   navbarPosition = idx;
-  let width = item.children[idx].offsetWidth;
+  let width = itemList.children[idx].offsetWidth;
   underbar.style.left = `${underbarPoint[idx] + width *0.1 + idx*itemMarginRight}px`;
   underbar.style.width = `${width *0.8}px`;
 }
@@ -48,9 +49,16 @@ function setPercent(){
 
 function handleItemClick(){
   for(let i = 0 ; i < underbarPoint.length; i++){
-    item.children[i].addEventListener("click",()=>{
+    itemList.children[i].addEventListener("click",()=>{
       document.getElementById(sectionPoint[i].key).scrollIntoView();
     })
+  }
+}
+
+const burger = document.createElement("app-burger-icon");
+function setMobileNavbar(){
+  if(mobilewidth >= window.innerWidth){
+    navbar.appendChild(burger)
   }
 }
 
@@ -58,5 +66,6 @@ export {
   setUnderbarPosition,
   setPercent,
   setUnderbarPoint,
-  handleItemClick
+  handleItemClick,
+  setMobileNavbar
 }
