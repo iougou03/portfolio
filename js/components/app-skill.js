@@ -60,17 +60,32 @@ class AppSkillContainer extends HTMLElement {
     .container{
       display:flex;
       align-items:center;
+      width:100%;
     }
     .container > app-skill{
       margin-right:1rem;
     }
-
+    .container::-webkit-scrollbar-thumb{
+      background-color: #C4C4C4;
+      border-radius:999px;
+      border: solid 2px #474747;
+      box-shadow: inset 0 0 10px 10px #C4C4C4;
+    }
     .small-container{
       display:grid;
       grid-template-columns: auto auto;
     }
     .small-container app-skill:nth-child(1){
       margin:0 7px 7px 0;
+    }
+
+    @media screen and (max-width:870px){
+      .container{
+        flex-wrap:wrap;
+      }
+      .container > app-skill, .small-container{
+        margin:0.5rem;
+      }
     }
   `
 

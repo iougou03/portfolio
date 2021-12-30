@@ -21,12 +21,13 @@
 
       <div class="nav-item-container">
         <ul class="nav-item-list">
-          <li
-            ><img
+          <li>
+            <img
               class="nav-home"
               src="static/images/home-icon.png"
               alt="home icon"
-          /></li>
+            />
+          </li>
           <li>About</li>
           <li>Motivation</li>
           <li>Works</li>
@@ -38,6 +39,9 @@
           <span>0</span>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; %
         </div>
+      </div>
+      <div class="nav-burger-container">
+        <app-burger-icon backgroundColor="#000"></app-burger-icon>
       </div>
     </nav>
     <!-- section intro -->
@@ -150,7 +154,7 @@
           class="about--notion-mac"
           imgSrc="./static/images/notion-memo-example.png"
           imgAlt="notion snapshot"
-          imgWidth="300px"
+          imgWidth="300"
         ></app-mac-image>
       </div>
     </section>
@@ -163,7 +167,7 @@
           <app-mac-image
             class="motivation--apple-mac"
             imgSrc="./static/images/apple-academy-logo.png"
-            imgWidth="270px"
+            imgWidth="270"
           >
           </app-mac-image>
         </div>
@@ -191,7 +195,59 @@
 
     <!-- works section -->
     <section id="works">
-      <div class="works--container">
+      <div class="works--top-container">
+        <div class="screen">
+          <img src="./static/images/work-hero.jpg" />
+
+          <div class="works--text-container scroll-fade-in-out">
+            What I have done
+          </div>
+          <!-- scroll-fade-in-out -->
+        </div>
+
+        <div class="works--graph">
+          <div class="works--graph-header-container">
+            <h1>Works</h1>
+            <p>My career, since 2020 1st semester</p>
+          </div>
+          <span class="line"></span>
+
+          <div class="works--career">
+            <span class="circle"></span>
+            <span class="stroke"></span>
+            <span class="year">2020</span>
+            <div class="career">
+              <p>
+                March - moved to the
+                <a title="university homepage" target="_blank" href="http://computer.knu.ac.kr/main/">
+                  <app-highlight text="computer science major 👈" color="#E13535" fontWeight="bold"></app-highlight> 
+                </a>
+              </p>
+              <p>April - start github</p>
+            </div>
+          </div>
+
+          <div class="works--career">
+            <span class="circle"></span>
+            <span class="stroke"></span>
+            <span class="year">2021</span>
+            <div class="career">
+              <p>
+                May ~ October - work for the start-up
+                <app-highlight
+                  text="as a web developer"
+                  color="#147ce5"
+                  fontWeight="bold"
+                ></app-highlight>
+              </p>
+              <p></p>
+            </div>
+          </div>
+          <span class="etc">. . . Career is still in progress</span>
+        </div>
+      </div>
+
+      <div class="works--bottom-container">
         <div class="works--header-container">
           <h1>Skills &</h1>
           <h1>Projects</h1>
@@ -207,6 +263,7 @@
               tenetur! Dicta.
             </p>
           </div>
+
           <app-skill-container> </app-skill-container>
         </div>
 
@@ -255,7 +312,7 @@
       <div class="fphrase--container">
         <div class="fphrase--text-container">
           <p>Favorite phrase</p>
-          <p>나만 나를<br />포기하지<br />않으면 된다.</p>
+          <p>나만 나를<br />포기하지<br />않으면 된다.<span></span></p>
         </div>
         <div class="fphrase--line"></div>
         <div class="fphrase--image-container">
@@ -263,7 +320,8 @@
             class="fphrase--careerly"
             imgSrc="./static/images/careerly-phrase.png"
             imgAlt="careerly snapshot"
-            imgWidth="400px"
+            imgWidth="400"
+            imgLink="https://careerly.co.kr/comments/43785?utm_campaign=user-share"
           ></app-mac-image>
         </div>
       </div>

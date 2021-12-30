@@ -155,6 +155,14 @@ class AppProjectContainer extends HTMLElement {
     div app-project{
       margin-right:1.5rem;
     }
+    @media screen and (max-width:870px){
+      div{
+        flex-direction:column;
+      }
+      div app-project{
+        margin:1rem;
+      }
+    }
   `;
   constructor() {
     super();

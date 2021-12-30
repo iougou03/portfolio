@@ -1,8 +1,24 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap");
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: #474747;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #C4C4C4;
+  border-radius: 999px;
+  border: solid 2px #474747;
+  box-shadow: inset 0 0 10px 10px #C4C4C4;
+}
+
 nav, section {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
   font-family: "Rajdhani", sans-serif;
+}
+
+.nav-burger-container {
+  display: none;
 }
 
 nav {
@@ -17,7 +33,6 @@ nav {
   background-color: #14141E;
   color: #fff;
   padding: 0 26px;
-  padding-bottom: 3px;
   z-index: 999;
 }
 
@@ -52,10 +67,7 @@ nav {
 
 .nav-underbar {
   position: absolute;
-  height: 2px;
   background-color: #E13535;
-  bottom: -3px;
-  left: 0;
   transition: ease 300ms;
 }
 
@@ -115,6 +127,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 #about {
@@ -237,7 +250,7 @@ nav {
 }
 .about--question-text-field .about--answer p {
   color: #000;
-  font-size: 1.125rem;
+  font-size: 1.2rem;
   font-weight: bold;
   padding-bottom: 1rem;
   width: fit-content;
@@ -247,7 +260,7 @@ nav {
 .about--notion-mac {
   position: absolute;
   right: 0;
-  bottom: 10vh;
+  bottom: 0;
 }
 
 #motivation {
@@ -283,7 +296,8 @@ nav {
   border-radius: 20px;
   padding: 5rem 3rem 5rem 6rem;
 }
-.motivation--text-container .motivation--icon {
+
+.motivation--icon {
   position: absolute;
   top: 50%;
   left: 0;
@@ -296,7 +310,7 @@ nav {
   align-items: center;
   justify-content: center;
 }
-.motivation--text-container .motivation--icon img {
+.motivation--icon img {
   width: 100px;
 }
 
@@ -308,12 +322,125 @@ nav {
 #works {
   width: 100%;
   background-color: #f5f5f7;
-  padding: 10vh 2rem;
 }
 
-.works--container {
+.works--top-container {
+  position: relative;
+}
+.works--top-container .screen img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+  transition: ease 600ms;
+  filter: brightness(60%);
+}
+
+.works--text-container {
+  position: relative;
+  z-index: 2;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.works--graph {
+  max-width: 800px;
+  margin-left: 10%;
+  position: sticky;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  z-index: 3;
+  padding-left: 5rem;
+  height: 800px;
+}
+.works--graph .line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(#fff 0%, rgba(255, 255, 255, 0.8) 70%, rgba(255, 255, 255, 0.5) 80%, transparent 100%);
+}
+.works--graph .etc {
+  position: absolute;
+  color: #a5a5a5;
+  font-weight: bold;
+  left: 1rem;
+  bottom: 1rem;
+}
+
+.works--graph-header-container > h1 {
+  font-size: 5rem;
+  margin-bottom: 0.5em;
+}
+.works--graph-header-container > p {
+  font-size: 1.5rem;
+}
+
+.works--career {
+  position: relative;
+  margin-top: 4rem;
+  display: flex;
+  width: 100%;
+}
+.works--career .circle, .works--career .stroke {
+  position: absolute;
+  left: -5rem;
+}
+.works--career .circle {
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border: #fff solid 2px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-45%);
+}
+.works--career .circle::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.works--career .stroke {
+  top: 15px;
+  width: 4rem;
+  height: 1px;
+  background-color: #fff;
+}
+.works--career .year {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 1em;
+  margin-top: 5px;
+}
+.works--career .career {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.125rem;
+}
+.works--career .career > p {
+  margin: 10px 0;
+}
+.works--career .career > p a:hover {
+  transition: ease 300ms;
+  filter: brightness(60%);
+}
+
+.works--bottom-container {
   max-width: 1050px;
   margin: auto;
+  padding: 10rem 0;
 }
 
 .works--header-container {
@@ -427,8 +554,14 @@ nav {
   color: transparent;
   width: fit-content;
   padding-top: 1rem;
+  transition: ease all 300ms;
+}
+.fphrase--text-container p:nth-child(2) > span {
+  display: inline-block;
+  position: relative;
 }
 
+@keyframes sparkle {}
 .fphrase--line {
   position: absolute;
   height: 50px;
@@ -489,6 +622,10 @@ footer > div:hover {
   display: none;
   opacity: 0;
   transition: ease 300ms;
+}
+
+.darker {
+  filter: brightness(30%) !important;
 }
 
 /*# sourceMappingURL=global-styles.css.map */

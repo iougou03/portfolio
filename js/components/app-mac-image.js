@@ -56,7 +56,7 @@ export default class AppMacImage extends HTMLElement {
     height:2px;
     width:0;
     position:absolute;
-    bottom:-2px;
+    bottom:-3px;
     right:0;
     background-color: #C4C4C4;
     transition: ease 300ms;
@@ -71,6 +71,7 @@ export default class AppMacImage extends HTMLElement {
     this.imgAlt = this.getAttribute("imgAlt");
     this.imgWidth = this.getAttribute("imgWidth");
     this.imgHeight = this.getAttribute("imgHeight");
+    this.imgLink = this.getAttribute("imgLink");
   }
   
   connectedCallback() {
@@ -93,8 +94,19 @@ export default class AppMacImage extends HTMLElement {
     <style>
     ${this.styles}
       .window img{
-        ${this.imgWidth ? "width : " + this.imgWidth : ""};
-        ${this.imgHeight ? "height : " + this.imgHeight : ""};
+        ${this.imgWidth ? "width : " + this.imgWidth + "px": ""};
+        ${this.imgHeight ? "height : " + this.imgHeight + "px": ""};
+      }
+      @media screen and (max-width:1050px){
+        .window img{
+          ${this.imgWidth ? "width : " + this.imgWidth / 3 * 2 +"px": ""};
+        }
+      }
+      a{
+        transition:ease 300ms;
+      }
+      a:hover{
+        filter: brightness(50%);
       }
     </style>
     <div class="window">
@@ -107,7 +119,12 @@ export default class AppMacImage extends HTMLElement {
       </div>
       <img src="${this.imgSrc}" alt="${this.imgAlt ? "alt = " + this.imgAlt : ""}">
     </div>
-    ${this.imgAlt ? `<p class="comment">${this.imgAlt}<span></span></p>` : ""}
+    ${this.imgAlt ? `
+      ${this.imgLink? `<a title="navigate to link" target="_blank" href=${this.imgLink}>`:""}
+        <p class="comment">${this.imgAlt}<span></span>
+      ${this.imgLink? `👈</p></a>`:"</p>"}
+      ` : ""}
+
     `;
   }
 }
