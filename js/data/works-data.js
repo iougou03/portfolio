@@ -35,7 +35,7 @@ const mySkills = [
     extension: ".png",
   },
   {
-    name: "github",
+    name: "git",
     imgAlt: "github skill",
     extension: ".png",
   },
@@ -51,7 +51,7 @@ const myProjects = [
     overlay: {
       title: "Create web, based on React & aws",
       period: "2021/05/24 ~ 2021/10/28",
-      body: "I get the project that should make a website by chance. The requirement of the project was the website should run with AWS service and make with React. So I studied for those skills, and create the site, and served it very successfully.",
+      body: "I get the project that should make a website by chance. The requirement of the project was the website should run with AWS service and make with React.<br/> So I studied for those skills, and create the site, and served it very successfully.",
     },
   },
   {
@@ -63,7 +63,7 @@ const myProjects = [
     overlay: {
       title: "Save broswer tabs",
       period: "2021/02/22 ~ 2021/04/12",
-      body: "I had a hard time finding the site that I wanted because of too many tabs (I open tabs on average 30-40), so I decided to create a program that I could save and load whenever I wanted!",
+      body: "I had a hard time finding the site that I wanted because of too many tabs (I open tabs on average 30-40).<br/> So I decided to create a program that I could save and load whenever I wanted!",
     },
   },
 ];

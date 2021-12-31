@@ -125,7 +125,6 @@
 
 @media screen and (max-width:1060px) {
   .about--question-container{
-    padding:10vh 0;
     margin-bottom: 210px;
   }
   .about--question{
@@ -169,10 +168,6 @@
       letter-spacing: 0.03em;
     }
   }
-  .goal--text-field{
-    padding:1rem;
-  }
-
   // fphrase
   .fphrase--container{
     flex-direction: column;
@@ -244,7 +239,13 @@
     padding:5rem 1rem 1rem 1rem;
   }
   .motivation--textArea{
-    font-size: 1.2rem;
+    font-size: .9rem;
+  }
+
+  // goal
+  .goal--text-field{
+    padding:1.5rem;
+    font-size: .9rem;
   }
 
   // works

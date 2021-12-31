@@ -11,8 +11,10 @@ body::-webkit-scrollbar-thumb{
   border: solid 2px #474747;
   box-shadow: inset 0 0 10px 10px #C4C4C4;
 }
-nav, section{
+section{
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+nav{
   font-family: "Rajdhani", sans-serif;
 }
 // navbar 
@@ -319,8 +321,8 @@ app-scroll-down-icon{
   }
 }
 .motivation--textArea{
-  font-size: 1.5rem;
-  line-height: 1.5em;
+  font-size: 1.2rem;
+  line-height: 1.8em;
 }
 
 // works section
@@ -446,7 +448,7 @@ app-scroll-down-icon{
 .works--bottom-container{
   max-width: 1050px;
   margin: auto;
-  padding:10rem 0;
+  padding:10rem 1rem;
 }
 .works--header-container{
   margin-bottom: 8rem;
@@ -463,6 +465,7 @@ app-scroll-down-icon{
 .works--text-field{
   max-width: 740px;
   margin-bottom: 5rem;
+
   h2{
     font-size: 2.5rem;
     font-weight: bold;
@@ -470,8 +473,41 @@ app-scroll-down-icon{
   }
   p{
     color: #7D7D7D;
-    font-size: 1.5rem;
-    line-height: 1.5em;
+    font-size: 1.3rem;
+    line-height: 2em;
+    font-weight: bold;
+  }
+  small{
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    ;
+  }
+  small > span{
+    display: inline-block;
+    position: relative;
+    background-color: #000;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 5px 5px 5px;
+  }
+  small > span::before, small >span::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background-color: #fff;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 2px;
+    height: 10px;
+  }
+  small > span::after{
+    transform: translate(-50%,-50%) rotate(90deg);
+  }
+  small > span::before{
+
   }
 }
 
@@ -517,9 +553,11 @@ app-scroll-down-icon{
   }
 }
 .goal--text-field{
-  padding:2rem;
+  padding:3rem;
   background-color: #fff;
   border-radius: 20px;
+  font-size: 1.2rem;
+  line-height: 1.8em;
 }
 
 // fphrase section

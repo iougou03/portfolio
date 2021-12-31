@@ -11,7 +11,12 @@ export default function scrollZoom(
   windowHeight,
   attrClass,
 ) {
-  if (start <= scrollPosition && scrollPosition < end) {
+  if (start > scrollPosition) {
+    element.style.width = `${initialWidth}px`;
+    element.style.height = `${initialHeight}px`;
+    element.style.opacity = 1;
+  }
+  else if (start <= scrollPosition && scrollPosition < end) {
     const zoomPoint = start + windowWidth / 2;
     const fadeOutPoint = start + ((end - start) / 4) * 3;
     const gapx = windowWidth - initialWidth;
@@ -34,6 +39,5 @@ export default function scrollZoom(
       element.style.opacity = 1 - ratio;
     }
   }
-  else if (start > scrollPosition) element.style.opacity = 1;
   else element.style.opacity = 0;
 }

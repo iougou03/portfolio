@@ -126,7 +126,7 @@ function handleScroll() {
   scrollZoom(
     window.scrollY,
     sectionPoint[2].sumHeight + windowHeight / 2, // start + 50vh
-    sectionPoint[2].sumHeight + parent.offsetHeight - windowHeight / 2, // end - 50vh
+    sectionPoint[2].sumHeight + parent.offsetHeight, // end
     worksHero,
     worksHeroInitialX,
     worksHeroInitialY,

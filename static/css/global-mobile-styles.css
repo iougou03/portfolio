@@ -125,7 +125,6 @@
 }
 @media screen and (max-width: 1060px) {
   .about--question-container {
-    padding: 10vh 0;
     margin-bottom: 210px;
   }
 
@@ -168,10 +167,6 @@
     margin-bottom: 0.3em;
     font-size: 1rem;
     letter-spacing: 0.03em;
-  }
-
-  .goal--text-field {
-    padding: 1rem;
   }
 
   .fphrase--container {
@@ -244,7 +239,12 @@
   }
 
   .motivation--textArea {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .goal--text-field {
+    padding: 1.5rem;
+    font-size: 0.9rem;
   }
 
   .works--skills-container, .works--projects-container {
