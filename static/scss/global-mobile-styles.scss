@@ -214,7 +214,7 @@
 
   // motivation
   #motivation{
-    padding:1rem;
+    padding:0 1rem;
   }
   .motivation--header-container {
     flex-direction: column;
@@ -248,8 +248,11 @@
   }
 
   // works
+  .works--skills-container, .works--projects-container{
+    margin-bottom: 5rem;
+  }
   .works--bottom-container{
-    padding:10rem 1rem;
+    padding:5rem 1rem;
   }
 }
 

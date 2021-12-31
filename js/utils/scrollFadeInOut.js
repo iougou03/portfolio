@@ -3,7 +3,7 @@ let ratio = 0;
 
 export default function scrollFadeInOut(scrollPosition, start, end, element){
   if(start <= scrollPosition && scrollPosition < end){
-      const fadeInPoint = start + (end - start) / 4;
+      const fadeInPoint = start? start + (end - start) / 4 : 0;
       const fadeOutPoint = start + (end - start) / 4 * 3;
       
       if(scrollPosition < fadeInPoint){

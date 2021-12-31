@@ -212,7 +212,7 @@
   }
 
   #motivation {
-    padding: 1rem;
+    padding: 0 1rem;
   }
 
   .motivation--header-container {
@@ -247,8 +247,12 @@
     font-size: 1.2rem;
   }
 
+  .works--skills-container, .works--projects-container {
+    margin-bottom: 5rem;
+  }
+
   .works--bottom-container {
-    padding: 10rem 1rem;
+    padding: 5rem 1rem;
   }
 }
 @media screen and (max-width: 360px) {

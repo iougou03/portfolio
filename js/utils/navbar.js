@@ -54,6 +54,7 @@ function setUnderbarPoint() {
   }
   
   setUnderbarStyles();
+  setUnderbarPosition();
   if(!isMobile){
     navItemContainer.classList.remove("active");
     if(iconComponent.isClicked) iconComponent.click();
@@ -101,7 +102,6 @@ function handleItemClick(){
 
 function setMobileNavbar(){
   iconComponent.addEventListener("mousedown",()=>{
-    console.log(iconComponent.isClicked)
     if(isMobile){
       if(iconComponent.isClicked) navItemContainer.classList.remove("active");
       else navItemContainer.classList.add("active");

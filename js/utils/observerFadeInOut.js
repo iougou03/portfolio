@@ -1,6 +1,7 @@
 export default class ObserverFadeInOut {
   io;
-
+  // rootMargin = TOP, RIGHT, BOTTOM, LEFT | (TOP, BOTTOM), (LEFT, RIGHT) 
+  // must write px or %
   constructor(fadeType, elementDict, threshold=0.5, rootMargin = "0px 0px -10% 0px") {
     elementDict.forEach(({ element, attributes }) => {
       switch (fadeType) {

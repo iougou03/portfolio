@@ -61,7 +61,7 @@ const myProjects = [
     type: "chrome extension",
     title: "TabHolder",
     overlay: {
-      title: "Save broswer window",
+      title: "Save broswer tabs",
       period: "2021/02/22 ~ 2021/04/12",
       body: "I had a hard time finding the site that I wanted because of too many tabs (I open tabs on average 30-40), so I decided to create a program that I could save and load whenever I wanted!",
     },

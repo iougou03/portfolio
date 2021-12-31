@@ -2,6 +2,9 @@ import AppHighlight from "./components/app-highlight.js";
 import AppMacImage from "./components/app-mac-image.js";
 import { AppSkill, AppSkillContainer } from "./components/app-skill.js";
 import { AppProject, AppProjectContainer } from "./components/app-project.js";
+import AppBurgerIcon from "./components/app-burger-icon.js";
+import AppScrollDownIcon from "./components/app-scroll-down-icon.js";
+
 import {
   setUnderbarPosition,
   setPercent,
@@ -12,7 +15,6 @@ import {
 } from "./utils/navbar.js";
 import ObserverFadeInOut from "./utils/observerFadeInOut.js";
 import scrollFadeInOut from "./utils/scrollFadeInOut.js";
-import AppBurgerIcon from "./components/app-burger-icon.js";
 import scrollZoom from "./utils/scrollZoom.js";
 
 let scrollRatio = 0;
@@ -95,6 +97,7 @@ worksHero.style.width = "400px";
 worksHero.style.height = "300px";
 const worksHeroInitialX = worksHero.offsetWidth;
 const worksHeroInitialY = worksHero.offsetHeight;
+const introIcon = document.querySelector("#intro app-scroll-down-icon");
 
 function handleScroll() {
   setScrollRatio();
@@ -102,6 +105,12 @@ function handleScroll() {
   setUnderbarPosition();
   setPercent();
 
+  scrollFadeInOut(
+    window.scrollY,
+    0,
+    450,
+    introIcon
+  )
   scrollFadeInOut(
     window.scrollY,
     400,
@@ -136,6 +145,7 @@ function setComponents() {
   customElements.define("app-project", AppProject);
   customElements.define("app-project-container", AppProjectContainer);
   customElements.define("app-burger-icon", AppBurgerIcon);
+  customElements.define("app-scroll-down-icon",AppScrollDownIcon);
 }
 
 // define fade in out DOMs
