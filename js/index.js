@@ -92,7 +92,7 @@ const worksTextContainer = document.querySelector(".works--top-container .works-
 const worksHero = document.querySelector(".works--top-container img");
 const parent = document.querySelector(".works--top-container");
 worksHero.style.width = "400px";
-worksHero.style.height = "fit-content";
+worksHero.style.height = "300px";
 const worksHeroInitialX = worksHero.offsetWidth;
 const worksHeroInitialY = worksHero.offsetHeight;
 
