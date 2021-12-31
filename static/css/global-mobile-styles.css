@@ -116,6 +116,9 @@
     height: 70vh;
   }
 
+  .works--career {
+    flex-direction: column;
+  }
   .works--career .career {
     padding-right: 10%;
   }
@@ -196,7 +199,7 @@
   }
   footer > div {
     padding: 1rem 0;
-    transform: translateY(2.5rem);
+    transform: unset;
   }
 
   .footer--contact {

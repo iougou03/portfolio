@@ -111,7 +111,7 @@ function handleScroll() {
   scrollFadeInOut(
     window.scrollY,
     sectionPoint[2].sumHeight + windowHeight / 2,
-    sectionPoint[2].sumHeight + parent.offsetHeight - (isMobile?windowHeight * 3: windowHeight * 2), 
+    sectionPoint[2].sumHeight + parent.offsetHeight - (isMobile? windowHeight * 3.5: windowHeight * 2), 
     worksTextContainer
   );
   scrollZoom(
